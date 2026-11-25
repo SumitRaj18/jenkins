@@ -11,7 +11,7 @@ pipeline {
 
     stages {
         stage('Install') {
-            steps { dir('my-app') { bat 'npm ci' } }
+            steps { dir('my-app') { bat 'npm i' } }
         }
         stage('Lint') {
             steps { dir('my-app') { bat 'npm run lint' } }
