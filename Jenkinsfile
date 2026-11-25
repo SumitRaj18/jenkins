@@ -19,8 +19,12 @@ pipeline {
         stage('Build') {
             steps { dir('my-app') { bat 'npm run build' } }
         }
-        stage('Deploy to Vercel') {
-            steps {dir {my-app} {bat 'npx vercel deploy --prod --yes'} }
+       stage('Deploy to Vercel') {
+    steps {
+        dir('my-app') {
+            bat 'npx vercel deploy --prod --yes'
         }
+    }
+}
     }
 }
