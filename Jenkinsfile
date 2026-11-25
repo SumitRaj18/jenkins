@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools { nodejs 'node-20' }
+    tools { nodejs 'node-22' }
 
     environment {
         VERCEL_TOKEN      = credentials('vercel-token')
